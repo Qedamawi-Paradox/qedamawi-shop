@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qedamawi Shop</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Qedamawi Shop</h1>
+        <div class="hbtns">
+            <button id="exportBtn" type="button" title="Backup Data">📥 Backup</button>
+            <button id="importBtn" type="button" title="Restore Data">📤 Restore</button>
+            <button id="langBtn" type="button"></button>
+            <button id="calBtn" type="button"></button>
+            <input type="file" id="importFileInput" accept=".json" class="hidden">
+        </div>
+    </header>
+    <main id="screen"></main>
+    <nav id="nav">
+        <button data-tab="sell" class="active"></button>
+        <button data-tab="products"></button>
+        <button data-tab="expenses"></button>
+        <button data-tab="credit"></button>
+        <button data-tab="report"></button>
+    </nav>
+    <script src="app.js"></script>
+    <script src="sw.js"></script>
+    <scrip src="manifest.json"></scrip>
+</body>
+</html>
