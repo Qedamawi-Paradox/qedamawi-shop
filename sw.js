@@ -4,7 +4,9 @@ const ASSETS = [
     "./index.html",
     "./style.css",
     "./app.js",
-    "./manifest.json"
+    "./manifest.json",
+    "./192.jpg",
+    "./512.jpg"
 ];
 
 // Install event: cache all core files
