@@ -1,20 +1,21 @@
 {
   "name": "Qedamawi Shop",
   "short_name": "Qedamawi",
-  "start_url": "./index.html",
+  "start_url": "/qedamawi-shop/",
+  "scope": "/qedamawi-shop/",
   "display": "standalone",
   "background_color": "#f4f5f7",
   "theme_color": "#1b7f4b",
   "icons": [
     {
-      "src": "./192.jpg",
+      "src": "/qedamawi-shop/icon-192.png",
       "sizes": "192x192",
-      "type": "image/jpg"
+      "type": "image/png"
     },
     {
-      "src": "./512.jpg",
+      "src": "/qedamawi-shop/icon-512.png",
       "sizes": "512x512",
-      "type": "image/jpg"
+      "type": "image/png"
     }
   ]
 }

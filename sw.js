@@ -1,15 +1,15 @@
-const CACHE_NAME = "qedamawi-shop-v1";
+const CACHE_NAME = "qedamawi-shop-v2";
 const ASSETS = [
     "./",
     "./index.html",
     "./style.css",
     "./app.js",
     "./manifest.json",
-    "./192.jpg",
-    "./512.jpg"
+    "./icon-192.png",
+    "./icon-512.png"
 ];
 
-// Install event: cache all core files
+// Install event
 self.addEventListener("install", (e) => {
     e.waitUntil(
         caches.open(CACHE_NAME).then((cache) => {
@@ -19,7 +19,7 @@ self.addEventListener("install", (e) => {
     self.skipWaiting();
 });
 
-// Activate event: clean up old caches
+// Activate event
 self.addEventListener("activate", (e) => {
     e.waitUntil(
         caches.keys().then((keys) => {
@@ -35,15 +35,8 @@ self.addEventListener("activate", (e) => {
     self.clients.claim();
 });
 
-// Fetch event: serve from cache, fallback to network
+// Fetch event
 self.addEventListener("fetch", (e) => {
-    e.respondId?.(
-        caches.match(e.request).then((cached) => {
-            return cached || fetch(e.request);
-        })
-    );
-    
-    // Standard fetch fallback implementation
     e.respondWith(
         caches.match(e.request).then((response) => {
             return response || fetch(e.request);
